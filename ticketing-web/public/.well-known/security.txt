@@ -1,0 +1,2 @@
+Contact: security@faustdev.com
+Preferred-Languages: en, de, hr

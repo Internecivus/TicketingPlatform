@@ -1,0 +1,8 @@
+/* TEAM */
+	Developer: Viktor Lenz
+	Contact: viktor.lenz@faustdev.com
+	From: Zagreb, Croatia
+
+/* SITE */
+	Last update: 2012/02/04
+	Language: English / Croatian
