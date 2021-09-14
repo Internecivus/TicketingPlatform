@@ -26,6 +26,10 @@ class Users extends React.Component {
       showUserCreateModal: false,
       users: props.users,
       showAlert: false,
+      alert: {
+        message: null,
+        variant: null,
+      },
     };
     this.groups = props.groups;
     this.userCreated = this.userCreated.bind(this);
@@ -230,7 +234,11 @@ class Users extends React.Component {
                     <fieldset disabled>
                       <Form.Group>
                         <Form.Label column="md">{t("users:workload")}</Form.Label>
-                        <Form.Control value={values.workload} name="workload" />
+                        <Form.Control
+                          onChange={() => null}
+                          value={values.workload}
+                          name="workload"
+                        />
                       </Form.Group>
                     </fieldset>
 

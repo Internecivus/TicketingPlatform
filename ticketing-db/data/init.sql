@@ -27,7 +27,7 @@ DO $$
                ('Ivo Vidovan', 'Ivo.Vidovan@outlook.com');
 
 
-        INSERT INTO credentials(password, user_id, pepper_alias) VALUES ('sygXTioDCN_ruj8C4dcZA2iEmOFbxYbRZxxjBERq1jNGminhmJJzIkRcERuwut5BU39pQIOainQg-NE11AxyIMalUUz5t4s0C2CwJjck-mVqdhXUHfyMh-bqLO2AqdItan9dfWRsLAMDXKfbm8wo3DPMtvx_-msS6OLHXwS3n711aG6Gi_knVbCOuQ', 1, 'PEPPER_1');
+        INSERT INTO credentials(password, user_id, pepper_alias) VALUES ('tLd7iXSPe8YAPO8Sx-x8D150WIZQTMMReVVj62PXyyVdqHOZE62yhcfxcv-5BZyD4E1sNV6uhoy8hjk9ndecpyJQFHonnwElzV0Oh0we5idEF4H7JCuNQ0kEuf7frOWDBZNMchdFqWJMMyRTczDKVY9Uzzw2GNPJKf4I50L2UT5m5fTa3tUhnozYFw', 1, 'PEPPER_1');
         INSERT INTO credentials(password, user_id, pepper_alias) VALUES ('sygXTioDCN_ruj8C4dcZA2iEmOFbxYbRZxxjBERq1jNGminhmJJzIkRcERuwut5BU39pQIOainQg-NE11AxyIMalUUz5t4s0C2CwJjck-mVqdhXUHfyMh-bqLO2AqdItan9dfWRsLAMDXKfbm8wo3DPMtvx_-msS6OLHXwS3n711aG6Gi_knVbCOuQ', 2, 'PEPPER_1');
         INSERT INTO credentials(password, user_id, pepper_alias) VALUES ('sygXTioDCN_ruj8C4dcZA2iEmOFbxYbRZxxjBERq1jNGminhmJJzIkRcERuwut5BU39pQIOainQg-NE11AxyIMalUUz5t4s0C2CwJjck-mVqdhXUHfyMh-bqLO2AqdItan9dfWRsLAMDXKfbm8wo3DPMtvx_-msS6OLHXwS3n711aG6Gi_knVbCOuQ', 3, 'PEPPER_1');
         INSERT INTO credentials(password, user_id, pepper_alias) VALUES ('sygXTioDCN_ruj8C4dcZA2iEmOFbxYbRZxxjBERq1jNGminhmJJzIkRcERuwut5BU39pQIOainQg-NE11AxyIMalUUz5t4s0C2CwJjck-mVqdhXUHfyMh-bqLO2AqdItan9dfWRsLAMDXKfbm8wo3DPMtvx_-msS6OLHXwS3n711aG6Gi_knVbCOuQ', 4, 'PEPPER_1');

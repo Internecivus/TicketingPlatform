@@ -11,24 +11,34 @@ function AuditedEntityMetadata(props) {
   const updatedValue = () =>
     entityData.lastUpdateUser || entityData.lastUpdatedDate
       ? `${entityData.lastUpdateUser} - ${entityData.lastUpdatedDate}`
-      : null;
+      : "";
 
   const createdValue = () =>
     entityData.createdUser || entityData.createdDate
       ? `${entityData.createdUser} - ${entityData.createdDate}`
-      : null;
+      : "";
 
   return (
     <fieldset disabled>
       <Row className="mt-3">
         <Form.Group as={Col}>
           <Form.Label column="md">{t("common:created")}</Form.Label>
-          <Form.Control size={"sm"} value={createdValue()} name="audited-entity-metadata" />
+          <Form.Control
+            size={"sm"}
+            onChange={() => null}
+            value={createdValue()}
+            name="audited-entity-metadata"
+          />
         </Form.Group>
 
         <Form.Group as={Col}>
           <Form.Label column="md">{t("common:updated")}</Form.Label>
-          <Form.Control size={"sm"} value={updatedValue()} name="audited-entity-metadata" />
+          <Form.Control
+            size={"sm"}
+            onChange={() => null}
+            value={updatedValue()}
+            name="audited-entity-metadata"
+          />
         </Form.Group>
       </Row>
     </fieldset>

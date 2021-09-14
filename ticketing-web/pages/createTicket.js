@@ -113,7 +113,7 @@ class CreateTicket extends React.Component {
               show={showAlert}
               onClose={() => this.setState({ showAlert: false })}
             />
-            <Button Button variant="secondary" type="submit" onClick={() => this.navigateToList()}>
+            <Button variant="secondary" type="submit" onClick={() => this.navigateToList()}>
               {t("tickets:backToList")}
             </Button>
 
