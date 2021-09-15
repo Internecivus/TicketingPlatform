@@ -65,5 +65,9 @@
       "Manager": "Menadžer"
     }
   },
-  "none": "Nijedan"
+  "none": "Nijedan",
+  "404": {
+    "title": "Greška 404",
+    "message": "Tražena stranica nije nađena."
+  }
 }

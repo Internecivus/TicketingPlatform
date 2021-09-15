@@ -65,5 +65,9 @@
       "Manager": "Manager"
     }
   },
-  "none": "None"
+  "none": "None",
+  "404": {
+    "title": "Error 404",
+    "message": "This page cannot be found."
+  }
 }

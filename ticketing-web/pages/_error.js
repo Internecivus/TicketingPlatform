@@ -13,7 +13,10 @@ class Error extends React.Component {
         <Head>
           <title>{t(`common:${errorCode}.title`)}</title>
         </Head>
-        <p>{t(`common:${errorCode}.message`)}</p>
+        <div className="text-center mt-3">
+          <h1>{t(`common:${errorCode}.title`)}</h1>
+          <p className="fs-5 mt-3">{t(`common:${errorCode}.message`)}</p>
+        </div>
       </PublicLayout>
     );
   }
