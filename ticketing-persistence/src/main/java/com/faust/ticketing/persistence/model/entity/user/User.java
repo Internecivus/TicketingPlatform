@@ -57,7 +57,7 @@ public class User extends AuditedEntity {
     public Integer getWorkload() {
         int workload = 0;
         for (Ticket assignedTicket : assignedTickets) {
-            workload += assignedTicket.getPriority().ordinal();
+            workload += assignedTicket.getPriority().ordinal() + 1;
         }
         return workload;
     }
