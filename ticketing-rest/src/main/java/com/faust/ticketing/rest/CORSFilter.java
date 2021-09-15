@@ -1,5 +1,8 @@
 package com.faust.ticketing.rest;
 
+import com.faust.ticketing.core.configuration.ServerConfiguration;
+import com.faust.ticketing.core.configuration.ServerMode;
+
 import javax.ws.rs.HttpMethod;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerResponseContext;
@@ -13,7 +16,7 @@ public class CORSFilter implements ContainerResponseFilter {
     private final static String HEADER_ORIGIN = "origin";
 
     private final static String HEADER_ALLOW_ORIGIN = "Access-Control-Allow-Origin";
-    private final static String HEADER_ALLOW_ORIGIN_VALUE = Application.DOMAIN_NAME;
+    private final static String HEADER_ALLOW_ORIGIN_VALUE = ServerConfiguration.DOMAIN_NAME;
 
     private final static String HEADER_ALLOW_HEADERS = "Access-Control-Allow-Headers";
     private final static String HEADER_ALLOW_HEADERS_VALUE = String.join(",",

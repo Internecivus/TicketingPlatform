@@ -15,6 +15,9 @@ const Application = {
   availableLanguages: ["en", "hr"],
 
   defaultLanguage: "hr",
+
+  serverDomain:
+    process.env.NODE_ENV === "production" ? "http://www.faustdev.com" : "http://localhost:8080",
 };
 
 export default Application;

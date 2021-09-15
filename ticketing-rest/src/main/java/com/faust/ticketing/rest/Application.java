@@ -6,5 +6,4 @@ import java.nio.charset.StandardCharsets;
 
 @ApplicationPath("/api")
 public class Application extends javax.ws.rs.core.Application {
-    public final static String DOMAIN_NAME = "http://localhost:3000";
 }

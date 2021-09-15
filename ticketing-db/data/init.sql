@@ -47,7 +47,7 @@ INSERT INTO user_user_group(user_id, user_group_id)
 SELECT usr.id, ugroup.id
 FROM app_user usr
          CROSS JOIN user_group ugroup
-WHERE ugroup.name = 'Administrator'
+WHERE ugroup.name = 'Administrator';
 
 INSERT INTO category(name, created_user_id)
 VALUES ('Retail Products', 1), ('Account Management', 1), ('Privacy', 1), ('Customer Feedback', 1), ('Online Shop', 1), ('Careers', 1), ('Internal', 1), ('Returns', 1),('Orders', 1), ('Billing', 1), ('Live Chat', 1), ('Revisions', 1);

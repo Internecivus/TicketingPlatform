@@ -1,4 +1,5 @@
 import fetch from "isomorphic-unfetch";
+import App from "next/app";
 import Application from "./application";
 import { Authentication } from "./authentication";
 
@@ -101,7 +102,7 @@ class CrudAPI extends API {
 }
 
 export const UserAPI = new (class extends CrudAPI {
-  path = "http://localhost:8080/api/user";
+  path = `${Application.serverDomain}/api/user`;
 
   getCurrentUser() {
     return this.getOne("current");
@@ -109,7 +110,7 @@ export const UserAPI = new (class extends CrudAPI {
 })();
 
 export const PasswordResetAPI = new (class extends API {
-  path = "http://localhost:8080/api/passwordReset";
+  path = `${Application.serverDomain}/api/passwordReset`;
 
   create(email) {
     return this.post(this.path, { email });
@@ -125,11 +126,11 @@ export const PasswordResetAPI = new (class extends API {
 })();
 
 export const CategoriesAPI = new (class extends CrudAPI {
-  path = "http://localhost:8080/api/category";
+  path = `${Application.serverDomain}/api/category`;
 })();
 
 export const TicketsAPI = new (class extends CrudAPI {
-  path = "http://localhost:8080/api/ticket";
+  path = `${Application.serverDomain}/api/ticket`;
 
   getAllForCurrentUser() {
     return this.get(`${this.path}/currentUser`);
@@ -141,11 +142,11 @@ export const TicketsAPI = new (class extends CrudAPI {
 })();
 
 export const GroupAPI = new (class extends CrudAPI {
-  path = "http://localhost:8080/api/group";
+  path = `${Application.serverDomain}/api/group`;
 })();
 
 export const AuthenticationAPI = new (class extends API {
-  path = "http://localhost:8080/api/authentication";
+  path = `${Application.serverDomain}/api/authentication`;
 
   login(usernameOrEmail, password) {
     return this.post(`${this.path}/login`, { usernameOrEmail, password });
