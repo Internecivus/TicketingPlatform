@@ -8,6 +8,7 @@ import com.faust.ticketing.persistence.model.entity.user.RoleName;
 import com.faust.ticketing.persistence.model.entity.user.User;
 
 import javax.annotation.security.DenyAll;
+import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -50,7 +51,7 @@ public class CategoryService {
         categoryRepository.delete(categoryId);
     }
 
-    @RolesAllowed({RoleName.Constant.BASIC_FUNCTIONALITY})
+    @PermitAll
     public Category toEntity(final SaveCategoryDTO dto) {
         final Category entity = new Category();
         return updateEntity(entity, dto);
@@ -67,13 +68,13 @@ public class CategoryService {
         return entity;
     }
 
-    @RolesAllowed({RoleName.Constant.BASIC_FUNCTIONALITY})
+    @PermitAll
     public Set<CategoryDTO> toDTO(final Collection<Category> entityList) {
         return Optional.ofNullable(entityList).orElse(Collections.emptySet())
                 .stream().map(this::toDTO).collect(Collectors.toSet());
     }
 
-    @RolesAllowed({RoleName.Constant.BASIC_FUNCTIONALITY})
+    @PermitAll
     public CategoryDTO toDTO(final Category category) {
         final CategoryDTO dto = new CategoryDTO();
         dto.setId(category.getId());

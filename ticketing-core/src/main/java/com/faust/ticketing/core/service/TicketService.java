@@ -10,6 +10,7 @@ import com.faust.ticketing.persistence.model.entity.user.RoleName;
 import com.faust.ticketing.persistence.model.entity.user.User;
 
 import javax.annotation.security.DenyAll;
+import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -75,7 +76,7 @@ public class TicketService {
         return toDTO(ticketRepository.update(ticket));
     }
 
-    @RolesAllowed({RoleName.Constant.BASIC_FUNCTIONALITY})
+    @PermitAll
     public Set<TicketDTO> toDTO(final Collection<Ticket> entityList) {
         return Optional.ofNullable(entityList).orElse(Collections.emptySet())
                 .stream().map(this::toDTO).collect(Collectors.toSet());
@@ -99,7 +100,7 @@ public class TicketService {
         return dto;
     }
 
-    @RolesAllowed({RoleName.Constant.BASIC_FUNCTIONALITY})
+    @PermitAll
     public TicketDTO toDTO(final Ticket ticket) {
         final TicketDTO dto = new TicketDTO();
         dto.setContent(ticket.getContent());
@@ -114,7 +115,7 @@ public class TicketService {
         return dto;
     }
 
-    @RolesAllowed(RoleName.Constant.BASIC_FUNCTIONALITY)
+    @PermitAll
     public Ticket toEntity(final SaveTicketDTO dto) {
         final Ticket entity = new Ticket();
         return updateEntity(entity, dto);

@@ -7,6 +7,7 @@ import com.faust.ticketing.persistence.model.entity.user.Role;
 import com.faust.ticketing.persistence.model.entity.user.RoleName;
 
 import javax.annotation.security.DenyAll;
+import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -24,7 +25,7 @@ public class GroupService {
         return toDTO(groupRepository.findAll());
     }
 
-    @RolesAllowed(RoleName.Constant.BASIC_FUNCTIONALITY)
+    @PermitAll
     public GroupDTO toDTO(final Group entity) {
         final GroupDTO dto = new GroupDTO();
         dto.setId(entity.getId());
@@ -32,19 +33,19 @@ public class GroupService {
         return dto;
     }
 
-    @RolesAllowed(RoleName.Constant.BASIC_FUNCTIONALITY)
+    @PermitAll
     public Set<GroupDTO> toDTO(final Collection<Group> entityList) {
         return Optional.ofNullable(entityList).orElse(Collections.emptySet())
                 .stream().map(this::toDTO).collect(Collectors.toSet());
     }
 
-    @RolesAllowed(RoleName.Constant.BASIC_FUNCTIONALITY)
+    @PermitAll
     public Set<Group> toEntity(final Collection<GroupDTO> dtoList) {
         return Optional.ofNullable(dtoList).orElse(Collections.emptySet())
                 .stream().map(this::toEntity).collect(Collectors.toSet());
     }
 
-    @RolesAllowed(RoleName.Constant.BASIC_FUNCTIONALITY)
+    @PermitAll
     private Group toEntity(final GroupDTO dto) {
         final Group group = new Group();
         return updateEntity(group, dto);

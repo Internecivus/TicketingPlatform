@@ -86,13 +86,13 @@ public class UserService {
         return toDTO(userRepository.update(user));
     }
 
-    @RolesAllowed(RoleName.Constant.BASIC_FUNCTIONALITY)
+    @PermitAll
     public User toEntity(final SaveUserDTO dto) {
         final User entity = new User();
         return updateEntity(entity, dto);
     }
 
-    @RolesAllowed({RoleName.Constant.BASIC_FUNCTIONALITY})
+    @PermitAll
     public Set<UserDTO> toDTO(final Collection<User> entityList) {
         return Optional.ofNullable(entityList).orElse(Collections.emptySet())
                 .stream().map(this::toDTO).collect(Collectors.toSet());
@@ -116,7 +116,7 @@ public class UserService {
         return dto;
     }
 
-    @RolesAllowed({RoleName.Constant.BASIC_FUNCTIONALITY})
+    @PermitAll
     public UserDTO toDTO(final User user) {
         if (user == null) {
             return null;
